@@ -18,7 +18,7 @@ final class UserForm
         return $schema
             ->components([
                 Select::make('type')
-                    ->searchable(),
+                    ->native(false),
                 TextInput::make('name')
                     ->afterStateUpdatedJs("\$set('type', \$state)")
             ]);
